@@ -3,3 +3,24 @@
   font-family: 'Quicksand', sans-serif;
 
 }
+
+.App {
+
+  background-image: url('./asset/background-boat.jpeg');
+  letter-spacing: 0.5px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-attachment: fixed;
+  z-index: -1;
+  height: 100vh;
+  overflow: auto;
+  text-align: center;
+
+
+}

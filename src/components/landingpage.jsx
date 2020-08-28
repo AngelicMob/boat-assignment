@@ -23,11 +23,6 @@ InputArea[type="text"]:focus,
 
 const LandingPageContent = styled.div`
 
-  background-color: #fdf6f6;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  min-height: 105vh;
   padding-top: 100px;
 
 `;
@@ -50,8 +45,6 @@ export default function LandingPage() {
 
 
                   <InputSearch type="text" placeholder="search"></InputSearch>
-
-
 
             </LandingPageStyle>
         </LandingPageContent>
