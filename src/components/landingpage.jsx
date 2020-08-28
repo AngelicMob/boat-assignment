@@ -1,14 +1,10 @@
 import React from 'react';
 import styled from "styled-components";
 
-const InputField = styled.div`
-height: 50px;
+
+
+const InputSearch = styled.input`
 width: 100%;
-padding: 5px;
-box-sizing: border-box;
-`;
-const InputArea = styled.input`
-width: 60%;
 padding: 12px 20px;
 outline: none;
 display: inline-block;
@@ -22,11 +18,11 @@ InputArea[type="text"]:focus,
   box-shadow: 0 0 5px rgba(81, 203, 238, 1);
   border: 1px solid rgba(81, 203, 238, 1);
 }
+
 `;
 
 const LandingPageStyle = styled.div`
 
-  @import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
 
 `;
 const LandingPageContent = styled.div`
@@ -37,7 +33,6 @@ const LandingPageContent = styled.div`
   background-size: cover;
   min-height: 105vh;
   padding-top: 100px;
-  font-family: 'Quicksand', sans-serif;
 
 `;
 
@@ -49,8 +44,10 @@ export default function LandingPage() {
         <LandingPageContent>
             <LandingPageStyle>
 
-            <h1>Testing that this works</h1>
-            <InputArea></InputArea>
+                <h1>Testing that this works</h1>
+
+
+                  <InputSearch type="text" placeholder="search"></InputSearch>
 
 
 
