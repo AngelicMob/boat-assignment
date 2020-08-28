@@ -21,10 +21,6 @@ InputArea[type="text"]:focus,
 
 `;
 
-const LandingPageStyle = styled.div`
-
-
-`;
 const LandingPageContent = styled.div`
 
   background-color: #fdf6f6;
@@ -35,6 +31,12 @@ const LandingPageContent = styled.div`
   padding-top: 100px;
 
 `;
+
+const LandingPageStyle = styled.div`
+
+
+`;
+
 
 export default function LandingPage() {
 
