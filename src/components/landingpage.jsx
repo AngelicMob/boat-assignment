@@ -23,11 +23,16 @@ InputArea[type="text"]:focus,
 
 const LandingPageContent = styled.div`
 
-  padding-top: 100px;
+
 
 `;
 
 const LandingPageStyle = styled.div`
+
+  h1
+    {
+    color: white;
+    }
 
 
 `;
@@ -41,7 +46,7 @@ export default function LandingPage() {
         <LandingPageContent>
             <LandingPageStyle>
 
-                <h1>Testing that this works</h1>
+                <h1>Welcome to Boato, we sell beautiful and strong boats</h1>
 
 
                   <InputSearch type="text" placeholder="search"></InputSearch>
