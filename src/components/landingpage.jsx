@@ -29,10 +29,7 @@ const LandingPageContent = styled.div`
 
 const LandingPageStyle = styled.div`
 
-  h1
-    {
-    color: white;
-    }
+
 
 
 `;
@@ -45,8 +42,6 @@ export default function LandingPage() {
 
         <LandingPageContent>
             <LandingPageStyle>
-
-                <h1>Welcome to Boato, we sell beautiful and strong boats</h1>
 
 
                   <InputSearch type="text" placeholder="search"></InputSearch>

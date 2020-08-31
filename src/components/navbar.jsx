@@ -23,7 +23,7 @@ const NavbarText = styled.div`
 `;
 
 
-export default function NavBar() {
+export default function NavBar({pageCurrent}) {
 
 
     return (
@@ -33,11 +33,10 @@ export default function NavBar() {
             <NavbarText>
                 <div id ="logo-text">
 
-                <div class ="logo">Boato</div> 
+                <div className ="logo">Boato</div>
 
-                        <li>Search Boats</li>
-                        <li>Edit Boats</li>
-                        <li>Add Boats</li>
+                        <li onClick = {() => pageCurrent('landingpage')}>Search Boats</li>
+                        <li onClick = {() => pageCurrent('editPage')}>Edit Boats</li>
 
                 </div>
             </NavbarText>
