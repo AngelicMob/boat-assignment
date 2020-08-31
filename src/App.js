@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import './App.css';
 import LandingPage from './components/landingpage.jsx';
 import Navbar from './components/navbar.jsx';
-import Edit from './components/AddBoat.jsx';
+import AddBoat from './components/AddBoat.jsx';
 
 
 
@@ -39,7 +39,7 @@ function App() {
         <LandingPage/>
 
       :
-        <Edit/>
+        <AddBoat/>
         }
 
     </div>

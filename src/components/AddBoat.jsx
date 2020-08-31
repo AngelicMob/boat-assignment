@@ -8,13 +8,11 @@ import styled from "styled-components";
 
 const EditStyle = styled.div`
 
-
   color: black;
   font-size: 50px;
 
-
 `;
-const BackgroundWrapper = styled.div`
+const AddWrapper = styled.div`
 
     height: 90vh;
     background-color: rgba(255, 255, 255, 0.9);
@@ -44,19 +42,13 @@ InputArea[type="text"]:focus,
 
 export default function AddBoat() {
 
-
-
-
-
     return (
 
-       <BackgroundWrapper>
-            <EditStyle>
-                Testing the edit
+       <AddWrapper>
+          <EditStyle></EditStyle>
+          <EditInput></EditInput>
 
-            </EditStyle>
-
-       </BackgroundWrapper>
+       </AddWrapper>
 
     )
 }
