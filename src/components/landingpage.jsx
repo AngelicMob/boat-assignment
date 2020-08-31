@@ -13,7 +13,7 @@ border-radius: 4px;
 box-sizing: border-box;
 
 
-InputArea[type="text"]:focus,
+InputSearch[type="text"]:focus,
 :focus {
   box-shadow: 0 0 5px rgba(81, 203, 238, 1);
   border: 1px solid rgba(81, 203, 238, 1);
@@ -29,8 +29,7 @@ const LandingPageContent = styled.div`
 
 const LandingPageStyle = styled.div`
 
-
-
+  background-color: rgba(255, 255, 255, 0.7);
 
 `;
 
@@ -43,6 +42,7 @@ export default function LandingPage() {
         <LandingPageContent>
             <LandingPageStyle>
 
+            <div className ="search-section"></div>
 
                   <InputSearch type="text" placeholder="search"></InputSearch>
 

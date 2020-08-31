@@ -4,8 +4,6 @@ import styled from "styled-components";
 
 
 const NavbarContent = styled.div`
-
-
   height: 0vh;
   background: rgba(0, 0, 0, 0.4);
   display: flex;
@@ -18,22 +16,41 @@ const NavbarContent = styled.div`
 
 const NavbarText = styled.div`
 
-.logo-text {
+    width: 100%;
+    #logo-text {
+        ul{
+            display: flex;
+            list-style: none;
+            float: right;
+            margin: 52px;
+            font-size: 25px;
+            li{
+                margin-left: 15px;
+                margin-right: 15px;
+                cursor: pointer;
+            }
+            li:hover{
 
-    display: flex;
+                border-bottom: 1px solid white;
+                padding-bottom: 3px;
 
+            }
+        }
 
-}
-.logo {
+    }
+    .logo {
 
-    font-size: 50px;
+        font-size: 50px;
+        float: left;
+        margin: 36px;
+        margin-left: 96px;
+        cursor: pointer;
+    }
+    .logo:hover{
+        border-bottom: 1px solid white;
+        padding-bottom: 3px;
 
-}
-
-li {
-    list-style: none;
-
-}
+    }
 
 `;
 
@@ -46,12 +63,15 @@ export default function NavBar({pageCurrent}) {
         <NavbarContent>
 
             <NavbarText>
+
+            <div className ="logo">Boato </div>
                 <div id ="logo-text">
 
-                <div className ="logo">Boato </div>
-
+                    <ul>
                         <li onClick = {() => pageCurrent('landingpage')}>Search Boats</li>
                         <li onClick = {() => pageCurrent('editPage')}>Edit Boats</li>
+                    </ul>
+
 
                 </div>
             </NavbarText>

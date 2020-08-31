@@ -15,7 +15,7 @@ const EditStyle = styled.div`
 const AddWrapper = styled.div`
 
     height: 90vh;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.7);
     padding: 50px 50px 50px 50px;
 
 `;
@@ -30,7 +30,7 @@ border-radius: 4px;
 box-sizing: border-box;
 
 
-InputArea[type="text"]:focus,
+EditInput[type="text"]:focus,
 :focus {
   box-shadow: 0 0 5px rgba(81, 203, 238, 1);
   border: 1px solid rgba(81, 203, 238, 1);
@@ -39,13 +39,12 @@ InputArea[type="text"]:focus,
 `;
 
 
-
 export default function AddBoat() {
 
     return (
 
        <AddWrapper>
-          <EditStyle></EditStyle>
+          <EditStyle>Upload Boat</EditStyle>
           <EditInput></EditInput>
 
        </AddWrapper>
