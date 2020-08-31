@@ -18,7 +18,22 @@ const NavbarContent = styled.div`
 
 const NavbarText = styled.div`
 
+.logo-text {
 
+    display: flex;
+
+
+}
+.logo {
+
+    font-size: 50px;
+
+}
+
+li {
+    list-style: none;
+
+}
 
 `;
 
@@ -33,7 +48,7 @@ export default function NavBar({pageCurrent}) {
             <NavbarText>
                 <div id ="logo-text">
 
-                <div className ="logo">Boato</div>
+                <div className ="logo">Boato </div>
 
                         <li onClick = {() => pageCurrent('landingpage')}>Search Boats</li>
                         <li onClick = {() => pageCurrent('editPage')}>Edit Boats</li>

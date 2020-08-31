@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import './App.css';
 import LandingPage from './components/landingpage.jsx';
 import Navbar from './components/navbar.jsx';
-import Edit from './components/Edit.jsx';
+import Edit from './components/AddBoat.jsx';
 
 
 
