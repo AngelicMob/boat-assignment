@@ -45,7 +45,7 @@ export default function AddBoat() {
 
        <AddWrapper>
           <EditStyle>Upload Boat</EditStyle>
-          <EditInput></EditInput>
+          <EditInput placeholder ="Search"></EditInput>
 
        </AddWrapper>
 
