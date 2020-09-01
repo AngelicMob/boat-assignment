@@ -21,13 +21,13 @@ const AddWrapper = styled.div`
 `;
 
 const EditInput = styled.input`
-width: 100%;
-padding: 12px 20px;
-outline: none;
-display: inline-block;
-border: 1px solid #ccc;
-border-radius: 4px;
-box-sizing: border-box;
+  width: 100%;
+  padding: 12px 20px;
+  outline: none;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
 
 
 EditInput[type="text"]:focus,
