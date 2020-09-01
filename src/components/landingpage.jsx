@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
-import BoatItem from './BoatItem';
+import BoatItem from './BoatList';
 
 
 const LandingPageStyle = styled.div`
