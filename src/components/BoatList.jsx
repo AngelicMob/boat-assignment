@@ -1,54 +1,33 @@
 import React, {useState, useEffect} from 'react';
 import styled from "styled-components";
 
-const BoatInfo = styled.div `
 
-    div.card-container {
-        border-bottom: 1px solid grey;
-        background-color: rgba(0,0,0, 0.30);
-        color: white;
-        display: flex;
-        justify-content: center;
-        padding: 10px;
+const BoatListStyle = styled.div`
 
-      }
-    div.card-container:nth-child(odd){
-        border-right: 1px solid grey;
-      }
+  box-shadow: 1px 4px 8px 2px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  margin-top: 2px;
+  margin-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  transition: 0.1s;
+  padding: 25px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 48vh;
+  background-color: rgba(255,255,255,0.1);
+  padding: 50px 50px 50px 50px;
+  width: 57%;
+  margin-left: 455px;
 
-    div.boats {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: center;
-      margin-left: 0;
-
-    }
-
-
-    .boats > .info-cards {
-      display: flexbox;
-      justify-content: flex-start;
-      margin-top: 28px;
-      border-bottom: 1px solid grey;
-    }
-
-    .info-cards {
-        text-align: left;
-        line-height: 37px;
-        margin: 1em;
-    }
-`;
-
-
-const BoatCard = styled.div`
-
-  background-color: rgba(255, 255, 255, 0.4);
-`;
-
-const ListStyle = styled.div`
-
-width: 100%;
+  h3 {
+    color: white;
+    font-size: 25px;
+    text-decoration: underline;
+    margin: -22px;
+    margin-bottom: 39px;
+  }
 
 .list {
 
@@ -60,9 +39,7 @@ width: 100%;
   border-bottom-left-radius: 25px;
   border-bottom-right-radius: 25px;
   padding-top: 40px;
-}
-
-  .list::-webkit-scrollbar {
+  ::-webkit-scrollbar {
   width: 0px;
   background: transparent;
 }
@@ -76,63 +53,38 @@ width: 100%;
 ::-webkit-scrollbar-thumb {
   background: rgb(61, 60, 60);
 }
+}
+
+
 
 `;
 
-const pageUrl =
-function GetBoats(setBoat, pageUrl) {
+//const pageUrl = something;
 
-
-}
+//function GetBoats(setBoat, pageUrl) {
+//}
 
 /*The */
-export default function BoatList(boats) {
+export default function BoatList() {
 
-    const [boat, setBoat] = useState('');
+   // const [boat, setBoat] = useState('');
 
-    useEffect(() => {
+   // useEffect(() => {
 
-      GetBoats(setBoats, pageUrl);
+     // GetBoats(setBoats, pageUrl);
 
-      // eslint-disable-next-line
-    }, []);
+      // eslint-disable-next-line}, []);
 
-    console.log(Array.isArray(boats))
-    console.log(boats)
-
-    const boatList = boats
-
-    .map((e) => (
-
-     <BoatCard>
-        <BoatInfo>
-          <div className='card' key={e._id}>
-                <div className='card-container'>
-                      <div className ="boats">
-
-                        <div className ="info-cards">
-                          <div>Name: {e.name}</div>
-                          <div> Eye-color: {e.eye_color}</div>
-                          <div> Age: {e.birth_year}</div>
-                          <div> Hair-color: {e.hair_color}</div>
-                        </div>
-
-                      </div>
-                  </div>
-          </div>
-        </BoatInfo>
-      </BoatCard>
-    ))
-
+   // console.log(Array.isArray(boats))
+    // console.log(boats)
 
     return (
 
-        <ListStyle>
-
+        <BoatListStyle>
+              <h3>All Boats</h3>
               <div className ="list">
-                  {boatList}
               </div>
-        </ListStyle>
+        </BoatListStyle>
 
     );
   }

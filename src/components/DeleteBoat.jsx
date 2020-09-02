@@ -30,7 +30,6 @@ const DeleteBackground = styled.div`
   }
 `;
 const DeleteContent = styled.div`
-
     height: 385px;
     width: 1114px;
     margin: -39px;
@@ -55,7 +54,9 @@ const DeleteContent = styled.div`
             padding: 25px 30px;
             display: flex;
             justify-content: space-between;
-            margin-bottom: 25px;
+            margin-bottom: 10px;
+            margin-left: -40px;
+            margin-right: 10px;
         }
         .table-header {
             background-color: #95A5A6;
