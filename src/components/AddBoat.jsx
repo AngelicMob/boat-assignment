@@ -4,11 +4,12 @@ import styled from "styled-components";
 
 const AddContent = styled.div`
 
-    height: 50vh;
+    height: 38vh;
     background-color: rgba(255,255,255,0.1);
     padding: 50px 50px 50px 50px;
-    width: 67%;
-    margin-left: 278px;
+    width: 52%;
+    margin-left: 455px;
+    border-radius: 8px;
   h3 {
     color: white;
     font-size: 25px;
@@ -18,19 +19,48 @@ const AddContent = styled.div`
 
   }
 
-  p {
+ .type-of-boat {
 
+      height: 75px;
+      width: 50%;
+      display: block;
+      box-sizing: border-box;
+      color: white;
+
+      .type-input {
+        font-size: 20px;
+        color: white;
+        display: block;
+        cursor: pointer;
+        margin: 14px;
+        margin-left: 497px
+      }
+      label {
+        cursor: pointer;
+      }
+    }
+`;
+
+const UploadButton = styled.div`
+
+.upload-button {
+
+    height: 43px;
+    width: 147px;
+    margin: 100px;
     color: white;
-    font-size: 15px;
-    font-weight: 300;
-  }
-
+    font-size: 19px;
+    background: transparent;
+    border: 2px solid white;
+    border-radius: 3px;
+    cursor: pointer;
+}
 
 `;
 
 
 const InputStyle = styled.input`
-    width: 46%;
+    width: 50%;
     padding: 12px 21px;
     outline: none;
     display: inline-block;
@@ -54,57 +84,41 @@ export default function AddBoat() {
 
             <h3>Upload Boat</h3>
 
-            <div className ="section-model">
-              <div className ="model-input">
-              <InputStyle type ="text" placeholder ="ModelName"></InputStyle>
-              </div>
 
-            </div>
+              <div className ="name-input">
+              <InputStyle id="name" type ="text" placeholder ="Name"></InputStyle>
+              <label for="name"></label>
+
+              </div>
             <br></br>
 
-            <div className ="section-mani">
+
               <div class="mani-input">
-              <InputStyle type ="text" placeholder ="Manifactured Year"></InputStyle>
+                <InputStyle id="mani" type ="text" placeholder ="Manifactured Year"></InputStyle>
+                <label for="mani"></label>
               </div>
-            </div>
             <br></br>
 
-            <div className ="section-price">
+
               <div className ="price-input">
-              <InputStyle type ="text" placeholder ="Price"></InputStyle>
-
+              <InputStyle id="price" type ="text" placeholder ="Price"></InputStyle>
+              <label for="price"></label>
               </div>
-            </div>
 
-            <div className ="section-sailing">
-
-
-                  <p>Saiing Boat</p>
-                <div class="sailing-input">
-                  <input type="radio" id="yes" name="choice" value="yes"></input>
-                  <label for="yes">Yes</label>
-                  <br></br>
-                  <input type="radio" id="no" name="choice" value="no"></input>
-                  <label for="no">No</label>
-
+              <div className ="type-of-boat">
+                  <label className="type-input" for="type">Type</label>
+                      <div className ="type">
+                            <input type="radio" id="sail" value="sail"name="choice"></input>
+                            <label for="sail">Sail</label>
+                            <br></br>
+                            <input type="radio" id="motor" value="motor"name="choice"></input>
+                            <label for="motor">Motor</label>
+                            <br></br>
+                      </div>
               </div>
-            </div>
-
-            <div className ="section-motor">
-
-
-                <p>Has Motor</p>
-              <div class="motor-input">
-                <input type="radio" id="yes1" name="choice" value="yes1"></input>
-                <label for="yes1">Yes</label>
-                <br></br>
-                <input type="radio" id="no1" name="choice" value="no1"></input>
-                <label for="no1">No</label>
-
-            </div>
-          </div>
-
-
+          <UploadButton>
+            <button className="upload-button" type="button">Upload</button>
+          </UploadButton>
        </AddContent>
 
     )

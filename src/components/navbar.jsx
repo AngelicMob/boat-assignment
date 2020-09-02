@@ -69,7 +69,7 @@ export default function NavBar({pageCurrent}) {
 
                     <ul>
                         <li onClick = {() => pageCurrent('landingpage')}>Search Boats</li>
-                        <li onClick = {() => pageCurrent('addPage')}>Add Boats</li>
+                        <li onClick = {() => pageCurrent('addPage')}>Add/Delete Boats</li>
                     </ul>
 
 

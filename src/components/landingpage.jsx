@@ -25,10 +25,7 @@ export default function LandingPage() {
 
         <LandingPageContent>
             <LandingPageStyle>
-
                   <BoatFilter></BoatFilter>
-
-
             </LandingPageStyle>
         </LandingPageContent>
 
