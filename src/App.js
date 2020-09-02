@@ -3,7 +3,7 @@ import './App.css';
 import LandingPage from './components/landingpage.jsx';
 import Navbar from './components/navbar.jsx';
 import AddBoat from './components/AddBoat.jsx';
-
+import DeleteBoat from './components/DeleteBoat';
 
 
 function App() {
@@ -20,9 +20,9 @@ function App() {
 
 
     }
-    else if (page === 'editPage') {
+    else if (page === 'addPage') {
 
-      setPage('editPage')
+      setPage('addPage')
 
 
     }
@@ -40,7 +40,8 @@ function App() {
 
       :
         <AddBoat/>
-        }
+        <DeleteBoat/>
+      }
 
     </div>
   );

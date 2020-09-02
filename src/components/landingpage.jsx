@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
-import BoatItem from './BoatList';
+// import BoatList from './BoatList';
+import BoatFilter from './BoatFilter';
 
 
 const LandingPageStyle = styled.div`
@@ -10,8 +11,6 @@ const LandingPageStyle = styled.div`
   height: 29vh;
 
 `;
-
-
 
 const LandingPageContent = styled.div`
 
@@ -27,7 +26,8 @@ export default function LandingPage() {
         <LandingPageContent>
             <LandingPageStyle>
 
-                  <BoatItem></BoatItem>
+                  <BoatFilter></BoatFilter>
+
 
             </LandingPageStyle>
         </LandingPageContent>
