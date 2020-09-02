@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 const AddContent = styled.div`
 
-    height: 38vh;
+    height: 34vh;
     background-color: rgba(255,255,255,0.1);
     padding: 50px 50px 50px 50px;
     width: 52%;
@@ -14,7 +14,7 @@ const AddContent = styled.div`
     color: white;
     font-size: 25px;
     text-decoration: underline;
-    margin: 17px;
+    margin: 0px;
     margin-bottom: 39px;
 
   }
@@ -47,7 +47,7 @@ const UploadButton = styled.div`
 
     height: 43px;
     width: 147px;
-    margin: 100px;
+    margin: 50px;
     color: white;
     font-size: 19px;
     background: transparent;
