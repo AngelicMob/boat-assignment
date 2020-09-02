@@ -55,7 +55,6 @@ const UploadButton = styled.div`
     border-radius: 3px;
     cursor: pointer;
 }
-
 `;
 
 

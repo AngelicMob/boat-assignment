@@ -6,7 +6,7 @@ const FilterContent = styled.div`
 `;
 
 const BoatInput = styled.input`
-    width: 93%;
+    width: 44%;
     padding: 12px 21px;
     outline: none;
     display: inline-block;
@@ -14,8 +14,7 @@ const BoatInput = styled.input`
     border-radius: 4px;
     box-sizing: border-box;
     margin: 54px;
-    margin-left: 63px;
-
+    margin-left: 91px;
 
   BoatInput[type="text"]:focus,
   :focus {
@@ -30,7 +29,7 @@ export default function BoatFilter() {
     return (
         <div>
             <FilterContent>
-                <BoatInput placeholder="Search for Model..."></BoatInput>
+                <BoatInput placeholder="Search for Name..."></BoatInput>
             </FilterContent>
         </div>
     )
