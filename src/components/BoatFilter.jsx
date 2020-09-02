@@ -30,7 +30,7 @@ export default function BoatFilter() {
     return (
         <div>
             <FilterContent>
-                <BoatInput placeholder="Search for Boat Model..."></BoatInput>
+                <BoatInput placeholder="Search for Model..."></BoatInput>
             </FilterContent>
         </div>
     )

@@ -22,6 +22,13 @@ const DeleteContainer = styled.div`
     font-size: 25px;
   }
 
+  sectionone {
+
+  }
+  sectiontwo {
+
+  }
+
 `;
 
 const DeleteContent = styled.div`
@@ -29,14 +36,9 @@ const DeleteContent = styled.div`
     width: 900px;
     overflow-x: hidden;
     overflow-y: scroll;
-
 `;
 
-const DeleteButton = styled.div `
 
-
-
-`;
 
 export default function DeleteBoat() {
     return (
@@ -45,11 +47,13 @@ export default function DeleteBoat() {
             <h3>Remove Boat</h3>
             <DeleteContent>
 
+                <div className ="boat-name">
 
-            <DeleteButton></DeleteButton>
+                </div>
+                <div className ="boat-price">
 
+                </div>
             </DeleteContent>
-
         </DeleteContainer>
 
     )

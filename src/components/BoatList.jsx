@@ -79,7 +79,7 @@ width: 100%;
 
 `;
 
-const pageUrl = 
+const pageUrl =
 function GetBoats(setBoat, pageUrl) {
 
 

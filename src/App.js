@@ -3,7 +3,7 @@ import './App.css';
 import LandingPage from './components/landingpage.jsx';
 import Navbar from './components/navbar.jsx';
 import AddBoat from './components/AddBoat.jsx';
-import DeleteBoat from './components/DeleteBoat';
+import DeleteBoat from './components/DeleteBoat.jsx';
 
 
 function App() {
@@ -39,8 +39,11 @@ function App() {
         <LandingPage/>
 
       :
+      <div>
         <AddBoat/>
         <DeleteBoat/>
+      </div>
+
       }
 
     </div>
