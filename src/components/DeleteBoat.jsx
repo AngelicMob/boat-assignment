@@ -16,10 +16,11 @@ const DeleteContainer = styled.div`
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  h2 {
+  h3 {
 
     font-weight: 300;
     font-size: 25px;
+    color: white;
   }
 
   sectionone {
@@ -36,8 +37,8 @@ const DeleteContent = styled.div`
     width: 900px;
     overflow-x: hidden;
     overflow-y: scroll;
-`;
 
+`;
 
 
 export default function DeleteBoat() {

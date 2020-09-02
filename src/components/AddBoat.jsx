@@ -4,47 +4,45 @@ import styled from "styled-components";
 
 const AddContent = styled.div`
 
-    height: 90vh;
-    background-color: rgba(255, 255, 255, 0.7);
+    height: 50vh;
+    background-color: rgba(255,255,255,0.1);
     padding: 50px 50px 50px 50px;
+    width: 67%;
+    margin-left: 278px;
   h3 {
-    color: black;
-    font-size: 50px;
+    color: white;
+    font-size: 25px;
+    text-decoration: underline;
+    margin: 17px;
+    margin-bottom: 39px;
 
   }
 
-  /* .section-model {
+  p {
 
-
+    color: white;
+    font-size: 15px;
+    font-weight: 300;
   }
 
-  .section-price {¨
-
-  } */
 
 `;
 
-const ContentTransparency = styled.div`
-  width: 100%;
-  height:100%;
-  background-color: rgba(255, 255, 255, 0.4);
-`;
 
 const InputStyle = styled.input`
-  width: 100%;
-  padding: 12px 20px;
-  outline: none;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
+    width: 46%;
+    padding: 12px 21px;
+    outline: none;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
 
-
-InputStyle[type="text"]:focus,
-:focus {
-  box-shadow: 0 0 5px rgba(81, 203, 238, 1);
-  border: 1px solid rgba(81, 203, 238, 1);
-}
+    InputStyle[type="text"]:focus,
+    :focus {
+      box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+      border: 1px solid rgba(81, 203, 238, 1);
+    }
 
 `;
 
@@ -55,32 +53,57 @@ export default function AddBoat() {
        <AddContent>
 
             <h3>Upload Boat</h3>
-          <ContentTransparency>
 
             <div className ="section-model">
               <div className ="model-input">
-              <InputStyle type ="text" placeholder ="modelName"></InputStyle>
+              <InputStyle type ="text" placeholder ="ModelName"></InputStyle>
               </div>
 
             </div>
             <br></br>
 
+            <div className ="section-mani">
+              <div class="mani-input">
+              <InputStyle type ="text" placeholder ="Manifactured Year"></InputStyle>
+              </div>
+            </div>
+            <br></br>
+
             <div className ="section-price">
               <div className ="price-input">
-              <InputStyle type ="text" placeholder ="price"></InputStyle>
+              <InputStyle type ="text" placeholder ="Price"></InputStyle>
 
               </div>
             </div>
 
             <div className ="section-sailing">
-              <div className ="sailing">
-              <label for="other">Other</label>
-                <InputStyle type="radio" name="gender" id="other" value="other"></InputStyle>
 
+
+                  <p>Saiing Boat</p>
+                <div class="sailing-input">
+                  <input type="radio" id="yes" name="choice" value="yes"></input>
+                  <label for="yes">Yes</label>
+                  <br></br>
+                  <input type="radio" id="no" name="choice" value="no"></input>
+                  <label for="no">No</label>
 
               </div>
             </div>
-            </ContentTransparency>
+
+            <div className ="section-motor">
+
+
+                <p>Has Motor</p>
+              <div class="motor-input">
+                <input type="radio" id="yes1" name="choice" value="yes1"></input>
+                <label for="yes1">Yes</label>
+                <br></br>
+                <input type="radio" id="no1" name="choice" value="no1"></input>
+                <label for="no1">No</label>
+
+            </div>
+          </div>
+
 
        </AddContent>
 
