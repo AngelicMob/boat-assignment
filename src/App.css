@@ -6,7 +6,6 @@
 }
 
 .App {
-
   background-image: url('./asset/background-boat.jpeg');
   letter-spacing: 0.5px;
   -webkit-font-smoothing: antialiased;
@@ -22,6 +21,5 @@
   height: 100vh;
   overflow: auto;
   text-align: center;
-
-
 }
+

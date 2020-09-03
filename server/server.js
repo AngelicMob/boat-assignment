@@ -14,7 +14,7 @@ app.get('/', (req, res) => {
 })
 
 //GET
-app.get('/hat', (req, res) => {
+app.get('/boat', (req, res) => {
 	getBoat(req.query.id, dataOrError => {
 		res.send(dataOrError)
 	})

@@ -87,7 +87,7 @@ export default function AddBoat() {
               </div>
               <br></br>
 
-              <div class="mani-input">
+              <div className="mani-input">
                 <InputStyle id="mani" type ="text" placeholder ="Manifactured Year"></InputStyle>
                 <label for="mani"></label>
               </div>
