@@ -13,12 +13,9 @@ const AddContent = styled.div`
   h3 {
     color: white;
     font-size: 25px;
-    text-decoration: underline;
     margin: 0px;
     margin-bottom: 39px;
-
   }
-
  .type-of-boat {
 
       height: 75px;

@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import styled from "styled-components";
 
 
-const BoatListStyle = styled.div`
+const BoatListBackground = styled.div`
 
   box-shadow: 1px 4px 8px 2px rgba(0, 0, 0, 0.2);
   border-radius: 8px;
@@ -17,45 +17,70 @@ const BoatListStyle = styled.div`
   box-sizing: border-box;
   height: 48vh;
   background-color: rgba(255,255,255,0.1);
-  padding: 50px 50px 50px 50px;
+  padding: 9px 15px 6px 52px;
   width: 57%;
   margin-left: 455px;
 
   h3 {
     color: white;
-    font-size: 25px;
-    text-decoration: underline;
-    margin: -22px;
+    font-size: 20px;
+    margin: -5px;
     margin-bottom: 39px;
   }
 
-.list {
+  `;
 
-  overflow-y: scroll;
-  max-height: 750px;
-  min-height: 250px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  border-bottom-left-radius: 25px;
-  border-bottom-right-radius: 25px;
-  padding-top: 40px;
-  ::-webkit-scrollbar {
-  width: 0px;
-  background: transparent;
-}
+  const BoatListStyle = styled.div`
+    height: 385px;
+    width: 1114px;
+    margin: -39px;
+    margin-top: 18px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+        ::-webkit-scrollbar {
+                width: 5px;
+        }
 
-::-webkit-scrollbar {
-  width: 5px;
-}
-::-webkit-scrollbar-track {
-  background: rgba(70, 95, 111, 0.87);
-}
-::-webkit-scrollbar-thumb {
-  background: rgb(61, 60, 60);
-}
-}
+        ::-webkit-scrollbar-track {
+            background: rgb(160 160 160);
+        }
+        ::-webkit-scrollbar-thumb {
 
-
+            background: #3c3c3c;
+        }
+        .remove-table {
+        li {
+            border-radius: 3px;
+            padding: 25px 30px;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            margin-left: -40px;
+            margin-right: 10px;
+        }
+        .table-header {
+            background-color: #95A5A6;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+        }
+        .table-row {
+            background-color: #ffffff;
+            box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.1);
+        }
+        .col-1 {
+            flex-basis: 25%;
+        }
+        .col-2 {
+            flex-basis: 25%;
+        }
+        .col-3 {
+            flex-basis: 25%;
+        }
+        .col-4 {
+            flex-basis: 25%;
+        }
+    }
 
 `;
 
@@ -80,11 +105,26 @@ export default function BoatList() {
 
     return (
 
+     <BoatListBackground>
         <BoatListStyle>
-              <h3>All Boats</h3>
-              <div className ="list">
-              </div>
+            <h3>Matches Found:</h3>
+              <ul class="remove-table">
+              <li class="table-header">
+                  <div class="col col-1">Name</div>
+                  <div class="col col-2">Price</div>
+                  <div class="col col-3">Made-After</div>
+                  <div class="col col-4">Type</div>
+              </li>
+              <li class="table-row">
+                  <div class="col col-1">Sweetrollu</div>
+                  <div class="col col-2">150 000 KR</div>
+                  <div class="col col-3">2017-12-25</div>
+                  <div class="col col-4">Sail</div>
+              </li>
+          </ul>
         </BoatListStyle>
+     </BoatListBackground>
+
 
     );
   }

@@ -12,7 +12,6 @@ const FilterContent = styled.div`
   h3 {
     color: white;
     font-size: 25px;
-    text-decoration: underline;
     margin: 0px;
     margin-bottom: 39px;
 
@@ -87,15 +86,14 @@ export default function BoatFilter() {
 
             </div>
 
-            <div class="mani-input">
-                <BoatInput id="mani" type ="text" placeholder ="Manifactured Year"></BoatInput>
-                <label for="mani"></label>
-            </div>
-
-
             <div className ="price-input">
               <BoatInput id="price" type ="text" placeholder ="MaxPrice"></BoatInput>
               <label for="price"></label>
+            </div>
+
+            <div className ="made-input">
+              <BoatInput id="made-after" type ="text" placeholder ="Made-After"></BoatInput>
+              <label for="made-after"></label>
             </div>
 
               <div className ="type-of-boat">

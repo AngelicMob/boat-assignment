@@ -6,7 +6,7 @@ const DeleteBackground = styled.div`
 
   box-shadow: 1px 4px 8px 2px rgba(0, 0, 0, 0.2);
   border-radius: 8px;
-  margin-top: 50px;
+  margin-top: 5px;
   margin-bottom: 50px;
   margin-left: auto;
   margin-right: auto;
@@ -15,18 +15,18 @@ const DeleteBackground = styled.div`
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  height: 38vh;
+  height: 45vh;
   background-color: rgba(255,255,255,0.1);
-  padding: 50px 50px 50px 50px;
+  padding: 24px 23px 0px 46px;
   width: 57%;
   margin-left: 455px;
 
   h3 {
     color: white;
-    font-size: 25px;
-    text-decoration: underline;
-    margin: -22px;
-    margin-bottom: 39px;
+    font-size: 20px;
+    margin: -5px;
+    margin-left: -42px;
+    margin-bottom: 15px;
   }
 `;
 const DeleteContent = styled.div`
@@ -82,11 +82,11 @@ const DeleteContent = styled.div`
         }
         .delete-button {
             height: 30px;
-            margin: -4px;
+            margin: -8px;
             width: 60px;
-            background: rgb(31 94 112);
+            background: rgb(134 11 18 / 67%);
             border: none;
-            padding: 3px;
+            padding: 6px 0px 0px 0px;
             border-radius: 3px;
             color: white;
             font-size: 15px;
@@ -94,8 +94,12 @@ const DeleteContent = styled.div`
             font-weight: 700;
             -webkit-flex-basis: 30%;
             -ms-flex-preferred-size: 30%;
+            -webkit-flex-basis: 20%;
+            -ms-flex-preferred-size: 20%;
+            -webkit-flex-basis: 20%;
+            -ms-flex-preferred-size: 20%;
             flex-basis: 20%;
-
+            cursor: pointer;
         }
     }
 `;
