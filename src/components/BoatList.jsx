@@ -124,7 +124,7 @@ export default function BoatList() {
       <li class="table-row">
                     <div className="col col-1">{e.name}</div>
                     <div className="col col-2">{e.price}</div>
-                    <div className="col col-3">{e.madeafter}</div>
+                    <div className="col col-3">{e.mani}</div>
                     {e.sail !== 'motor' ?
                       <div className="col col-4">Type: Motorized</div>
                       :
@@ -155,7 +155,7 @@ export default function BoatList() {
               <li class="table-header">
                   <div class="col col-1">Name</div>
                   <div class="col col-2">Price</div>
-                  <div class="col col-3">Made-After</div>
+                  <div class="col col-3">Manifactured</div>
                   <div class="col col-4">Type</div>
               </li>
               {boatList}
