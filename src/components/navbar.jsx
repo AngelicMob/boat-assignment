@@ -59,25 +59,16 @@ export default function NavBar({pageCurrent}) {
 
 
     return (
-
         <NavbarContent>
-
             <NavbarText>
-
             <div className ="logo">Boato </div>
                 <div id ="logo-text">
-
                     <ul>
                         <li onClick = {() => pageCurrent('landingpage')}>Search Boats</li>
                         <li onClick = {() => pageCurrent('addPage')}>Add/Delete Boats</li>
                     </ul>
-
-
                 </div>
             </NavbarText>
-
         </NavbarContent>
-
-
     );
   }

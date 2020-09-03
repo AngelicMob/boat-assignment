@@ -112,12 +112,6 @@ const BoatMapWrapper = styled.div `
     }
 `;
 
-//const pageUrl = something;
-
-//function GetBoats(setBoat, pageUrl) {
-//}
-
-/*The */
 export default function BoatList() {
 
   const [boat, setBoat] = useState('');
@@ -128,24 +122,29 @@ export default function BoatList() {
     <BoatMapWrapper key={e._id}>
 
       <li class="table-row">
-                    <div class="col col-1">{e.name}</div>
-                    <div class="col col-2">{e.price}</div>
-                    <div class="col col-3">{e.madeafter}</div>
-                    <div class="col col-4">{e.sail !== 'motor' ?
-                    <div>Type: Motorized</div>
-                    :
-                    <div>Type: Sail</div>
-                  }</div>
+                    <div className="col col-1">{e.name}</div>
+                    <div className="col col-2">{e.price}</div>
+                    <div className="col col-3">{e.madeafter}</div>
+                    {e.sail !== 'motor' ?
+                      <div className="col col-4">Type: Motorized</div>
+                      :
+                      <div className="col col-4">Type: Sail</div>
+                    }
       </li>
     </BoatMapWrapper>
   ));
-   // useEffect(() => {
 
-     // GetBoats(setBoats, pageUrl);
 
-      // eslint-disable-next-line}, []);
+    function GetBoats(setBoat, pageUrl) {
 
-   // console.log(Array.isArray(boats))
+    }
+
+    /*The */
+
+    // useEffect(() => {
+    // GetBoats(setBoats, pageUrl);
+    // eslint-disable-next-line}, []);
+    // console.log(Array.isArray(boats))
     // console.log(boats)
     return (
 

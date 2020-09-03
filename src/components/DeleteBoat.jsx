@@ -82,11 +82,11 @@ const DeleteContent = styled.div`
         }
         .delete-button {
             height: 30px;
-            margin: -8px;
+            margin: -9px;
             width: 60px;
             background: rgb(134 11 18 / 67%);
             border: none;
-            padding: 6px 0px 0px 0px;
+            padding: 9px 0px 0px 0px;
             border-radius: 3px;
             color: white;
             font-size: 15px;
@@ -103,7 +103,6 @@ const DeleteContent = styled.div`
         }
     }
 `;
-
 
 
 export default function DeleteBoat() {

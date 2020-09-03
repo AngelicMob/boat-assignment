@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
-import BoatList from './BoatList';
+// import BoatList from './BoatList';
 import BoatFilter from './BoatFilter';
 
 
@@ -25,7 +25,6 @@ export default function LandingPage() {
         <LandingPageContent>
             <LandingPageStyle>
                   <BoatFilter></BoatFilter>
-                  <BoatList></BoatList>
             </LandingPageStyle>
         </LandingPageContent>
 
