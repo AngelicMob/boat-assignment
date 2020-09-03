@@ -104,24 +104,25 @@ const DeleteContent = styled.div`
     }
 `;
 
+
+
 export default function DeleteBoat() {
     return (
 
         <DeleteBackground>
             <h3>Remove Boat</h3>
-
             <DeleteContent>
                 <ul class="remove-table">
                     <li class="table-header">
                         <div class="col col-1">Name</div>
                         <div class="col col-2">Price</div>
-                        <div class="col col-3">Manifactured</div>
+                        <div class="col col-3">Sail</div>
                         <div class="col col-4"></div>
                     </li>
                     <li class="table-row">
                         <div class="col col-1">Example</div>
                         <div class="col col-2">150 000 KR</div>
-                        <div class="col col-3">2017-12-25</div>
+                        <div class="col col-3">Yes</div>
                         <div class="delete-button">Remove</div>
                     </li>
                 </ul>

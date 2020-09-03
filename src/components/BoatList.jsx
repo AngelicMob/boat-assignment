@@ -3,7 +3,6 @@ import styled from "styled-components";
 
 
 const BoatListBackground = styled.div`
-
   box-shadow: 1px 4px 8px 2px rgba(0, 0, 0, 0.2);
   border-radius: 8px;
   margin-top: 2px;
@@ -83,6 +82,35 @@ const BoatListBackground = styled.div`
     }
 
 `;
+const BoatMapWrapper = styled.div `
+    .boat-list {
+        li {
+            border-radius: 3px;
+            padding: 25px 30px;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            margin-left: -40px;
+            margin-right: 10px;
+        }
+        .table-row {
+            background-color: #ffffff;
+            box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.1);
+        }
+        .col-1 {
+            flex-basis: 25%;
+        }
+        .col-2 {
+            flex-basis: 25%;
+        }
+        .col-3 {
+            flex-basis: 25%;
+        }
+        .col-4 {
+            flex-basis: 25%;
+        }
+    }
+`;
 
 //const pageUrl = something;
 
@@ -92,8 +120,25 @@ const BoatListBackground = styled.div`
 /*The */
 export default function BoatList() {
 
-   // const [boat, setBoat] = useState('');
+  const [boat, setBoat] = useState('');
 
+
+  const boatList = boat.map((e) => (
+
+    <BoatMapWrapper key={e._id}>
+
+      <li class="table-row">
+                    <div class="col col-1">{e.name}</div>
+                    <div class="col col-2">{e.price}</div>
+                    <div class="col col-3">{e.madeafter}</div>
+                    <div class="col col-4">{e.sail !== 'motor' ?
+                    <div>Type: Motorized</div>
+                    :
+                    <div>Type: Sail</div>
+                  }</div>
+      </li>
+    </BoatMapWrapper>
+  ));
    // useEffect(() => {
 
      // GetBoats(setBoats, pageUrl);
@@ -102,7 +147,6 @@ export default function BoatList() {
 
    // console.log(Array.isArray(boats))
     // console.log(boats)
-
     return (
 
      <BoatListBackground>
@@ -115,12 +159,7 @@ export default function BoatList() {
                   <div class="col col-3">Made-After</div>
                   <div class="col col-4">Type</div>
               </li>
-              <li class="table-row">
-                  <div class="col col-1">Sweetrollu</div>
-                  <div class="col col-2">150 000 KR</div>
-                  <div class="col col-3">2017-12-25</div>
-                  <div class="col col-4">Sail</div>
-              </li>
+              {boatList}
           </ul>
         </BoatListStyle>
      </BoatListBackground>

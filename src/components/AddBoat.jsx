@@ -18,24 +18,24 @@ const AddContent = styled.div`
   }
  .type-of-boat {
 
-      height: 75px;
-      width: 50%;
-      display: block;
-      box-sizing: border-box;
-      color: white;
+    height: 75px;
+    width: 50%;
+    display: block;
+    box-sizing: border-box;
+    color: white;
 
-      .type-input {
-        font-size: 20px;
-        color: white;
-        display: block;
-        cursor: pointer;
-        margin: 14px;
-        margin-left: 497px
-      }
-      label {
-        cursor: pointer;
-      }
+  .type-input {
+    font-size: 20px;
+    color: white;
+    display: block;
+    cursor: pointer;
+    margin: 14px;
+    margin-left: 497px
     }
+    label {
+        cursor: pointer;
+      }
+}
 `;
 
 const UploadButton = styled.div`
@@ -82,18 +82,16 @@ export default function AddBoat() {
 
 
               <div className ="name-input">
-              <InputStyle id="name" type ="text" placeholder ="Name"></InputStyle>
-              <label for="name"></label>
-
+                <InputStyle id="name" type ="text" placeholder ="Name"></InputStyle>
+                <label for="name"></label>
               </div>
-            <br></br>
-
+              <br></br>
 
               <div class="mani-input">
                 <InputStyle id="mani" type ="text" placeholder ="Manifactured Year"></InputStyle>
                 <label for="mani"></label>
               </div>
-            <br></br>
+              <br></br>
 
 
               <div className ="price-input">
