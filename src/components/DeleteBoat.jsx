@@ -131,8 +131,6 @@ export default function DeleteBoat() {
 
     useEffect(() => {
     GetBoats(setBoat);
-    // eslint-disable-next-line
-
     }, []);
 
 

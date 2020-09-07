@@ -10,9 +10,8 @@ function getAll(callback) {
 }
 
 
-function add(callback) {
-  addBoats({}, callback)
-
+function add(boat, callback) {
+  addBoats(boat, callback)
 }
 
 
@@ -41,8 +40,8 @@ function getAllBoats(filter, callback) {
   );
 }
 
-function addBoats(reqestsBody, callback) {
-	const doc = reqestsBody;
+function addBoats(requestBoat, callback) {
+	const doc = requestBoat;
 	MongoClient.connect(
 		url,
 		{ useUnifiedTopology: true},

@@ -1,5 +1,7 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import styled from "styled-components";
+import axios from 'axios';
+
 
 
 const AddContent = styled.div`
@@ -72,15 +74,55 @@ const InputStyle = styled.input`
 
 `;
 
+const mainUrl = 'http://localhost:1234/';
+
+function submit(boat) {
+
+  console.log('soemtdsfsmf', boat);
+
+  const printBoat = JSON.stringify(boat);
+  axios.post(mainUrl + 'add', {params: printBoat})
+  .then((res) =>{
+      console.log(res.data);
+  })
+  .catch((error) => console.log(error));
+
+  }
 
 
 
 export default function AddBoat() {
 
-  const [add, setAdd] = useState([]);
+  const [name, setName] = useState('');
+  const [price, setPrice] = useState('');
+  const [mani, setMani] = useState('');
+  const [type, setType] = useState('');
 
-      useEffect(() => {
-      }, []);
+  const boat = {};
+
+  function uploadBoat() {
+
+    boat.modellname = name;
+    boat.price = parseInt(price);
+    boat.manifacturedYear = parseInt(mani);
+
+    if(type === 'sail') {
+
+      boat.motorized = 'no';
+      boat.sail = 'yes';
+    }
+
+    else {
+
+      boat.motorized = 'yes';
+      boat.sail = 'no';
+    }
+
+    submit(boat)
+    console.log(boat);
+  }
+
+
 
     return (
 
@@ -88,26 +130,26 @@ export default function AddBoat() {
 
             <h3>Upload Boat</h3>
               <div className ="name-input">
-                <InputStyle id="name" type ="text" placeholder ="Name"></InputStyle>
+                <InputStyle id="name" type ="text" placeholder ="Name" value = {name} onChange = {(e) => setName(e.target.value)}></InputStyle>
                 <label htmlFor="name"></label>
               </div>
               <br></br>
 
               <div className="mani-input">
-                <InputStyle id="mani" type ="text" placeholder ="Manifactured Year"></InputStyle>
+                <InputStyle id="mani" type ="text" placeholder ="Manifactured Year" value = {mani} onChange = {(e) => setMani(e.target.value)}></InputStyle>
                 <label htmlFor="mani"></label>
               </div>
               <br></br>
 
 
               <div className ="price-input">
-              <InputStyle id="price" type ="text" placeholder ="Price"></InputStyle>
+              <InputStyle id="price" type ="text" placeholder ="Price" value = {price} onChange = {(e) => setPrice(e.target.value)}></InputStyle>
               <label htmlFor="price"></label>
               </div>
 
               <div className ="type-of-boat">
                   <label className="type-input" htmlFor="type">Type</label>
-                      <div className ="type">
+                      <div className ="type" onChange = {(e) => setType(e.target.value)}>
                             <input type="radio" id="sail" value="sail"name="choice"></input>
                             <label htmlFor="sail">Sail</label>
                             <br></br>
@@ -118,7 +160,7 @@ export default function AddBoat() {
               </div>
 
             <UploadButton>
-                <button className="upload-button" type="button">Upload</button>
+                <button className="upload-button" type="button" onClick = {() => uploadBoat()} >Upload</button>
             </UploadButton>
        </AddContent>
 

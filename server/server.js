@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const port = process.env.PORT || 1234;
 const bodyParser = require("body-parser");
-const { getAll, add, remove} = require('./database.js');
+const { getAll, add, remove, search} = require('./database.js');
 
 
 
@@ -26,11 +26,11 @@ app.get("/boats", (req, res) => {
 });
 
 // POST
-app.post('/addBoats', (req, res) => {
-	console.log(req.body.params)
-	  add(req.body.params, dataOrError => {
-		  res.send(dataOrError)
-	  })
+app.post('/add', (req, res) => {
+	console.log('something', req)
+	//   add(req.body.params, dataOrError => {
+	// 	  res.send(dataOrError)
+	//   })
   })
 
 
@@ -44,12 +44,12 @@ app.delete("/delete", (req, res) => {
 
 
 //SEARCH
-// app.get('/search', (req, res) => {
+app.get('/search', (req, res) => {
 
-// 	search(req.query, dataOrError => {
-// 		res.send(dataOrError)
-// 	})
-// })
+	search(req.query, dataOrError => {
+		res.send(dataOrError)
+	})
+})
 
 
 //Start Server
