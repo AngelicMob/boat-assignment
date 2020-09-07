@@ -27,7 +27,7 @@ app.get("/boats", (req, res) => {
 
 // POST
 app.post('/add', (req, res) => {
-	console.log('something', req)
+	console.log('something', req.query)
 	//   add(req.body.params, dataOrError => {
 	// 	  res.send(dataOrError)
 	//   })

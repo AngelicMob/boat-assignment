@@ -80,8 +80,8 @@ function submit(boat) {
 
   console.log('soemtdsfsmf', boat);
 
-  const printBoat = JSON.stringify(boat);
-  axios.post(mainUrl + 'add', {params: printBoat})
+
+  axios.post(mainUrl + 'add', {info: boat})
   .then((res) =>{
       console.log(res.data);
   })

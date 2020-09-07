@@ -28,7 +28,6 @@ function getAllBoats(filter, callback) {
       try {
         const cursor = await col.find(filter);
         const array = await cursor.toArray();
-        console.log(array)
         callback(array);
       } catch (error) {
         console.log("Query error: " + error.message);
@@ -59,7 +58,7 @@ function addBoats(requestBoat, callback) {
 				})
 
 			} catch(error) {
-				console.error('addHat error: ' + error.message);
+				console.error('addBoat error: ' + error.message);
 				callback('"ERROR!! Query error"');
 
 			} finally {
