@@ -105,21 +105,25 @@ const DeleteContent = styled.div`
     }
 `;
 const DeleteMapWrapper = styled.div `
-
-
-
-
 `;
 
 
-const pageUrl = 'http://localhost:1234/boats';
+const mainUrl = 'http://localhost:1234/';
 function GetBoats(setBoat) {
 
-    axios.get(pageUrl)
+    axios.get(mainUrl + 'boats')
     .then((res) => setBoat(res.data))
     .catch((error) => console.log(error));
 }
 
+function removeBoat(id, setBoat) {
+    axios.delete(mainUrl + 'delete', {params: {id: id}})
+    .then((res) =>{
+        GetBoats(setBoat)
+        console.log(res.data);
+    })
+    .catch((error) => console.log(error));
+}
 
 export default function DeleteBoat() {
 
@@ -140,7 +144,7 @@ export default function DeleteBoat() {
                 <div className="col col-1">{e.modellname}</div>
                 <div className="col col-2">{e.price} KR</div>
                 <div className="col col-3">{e.manifacturedYear}</div>
-                <div className="delete-button">Remove</div>
+                <div className="delete-button" onClick = {() => removeBoat(e._id, setBoat)} >Remove</div>
 
           </li>
         </DeleteMapWrapper>

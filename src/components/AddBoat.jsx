@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react';
 import styled from "styled-components";
 
 
@@ -72,15 +72,21 @@ const InputStyle = styled.input`
 
 `;
 
+
+
+
 export default function AddBoat() {
+
+  const [add, setAdd] = useState([]);
+
+      useEffect(() => {
+      }, []);
 
     return (
 
        <AddContent>
 
             <h3>Upload Boat</h3>
-
-
               <div className ="name-input">
                 <InputStyle id="name" type ="text" placeholder ="Name"></InputStyle>
                 <label htmlFor="name"></label>
@@ -110,9 +116,10 @@ export default function AddBoat() {
                             <br></br>
                       </div>
               </div>
-          <UploadButton>
-            <button className="upload-button" type="button">Upload</button>
-          </UploadButton>
+
+            <UploadButton>
+                <button className="upload-button" type="button">Upload</button>
+            </UploadButton>
        </AddContent>
 
     )
