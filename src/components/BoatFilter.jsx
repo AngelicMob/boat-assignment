@@ -82,28 +82,28 @@ export default function BoatFilter() {
 
             <div className ="name-input">
               <BoatInput id="name" type ="text" placeholder ="Boat Name"></BoatInput>
-              <label for="name"></label>
+              <label htmlFor="name"></label>
 
             </div>
 
             <div className ="mani-input">
               <BoatInput id="mani" type ="text" placeholder ="Where was the boat manifactured?"></BoatInput>
-              <label for="mani"></label>
+              <label htmlFor="mani"></label>
             </div>
 
             <div className ="price-input">
               <BoatInput id="price" type ="text" placeholder ="Max Price"></BoatInput>
-              <label for="price"></label>
+              <label htmlFor="price"></label>
             </div>
 
               <div className ="type-of-boat">
-                  <label className="type-input" for="type">Type</label>
+                  <label className="type-input" htmlFor="type">Type</label>
                       <div className ="type">
                             <input type="radio" id="sail" value="sail"name="choice"></input>
-                            <label for="sail">Sail</label>
+                            <label htmlFor="sail">Sail</label>
                             <br></br>
                             <input type="radio" id="motor" value="motor"name="choice"></input>
-                            <label for="motor">Motor</label>
+                            <label htmlFor="motor">Motor</label>
                             <br></br>
                       </div>
               </div>

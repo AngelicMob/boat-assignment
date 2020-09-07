@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import styled from "styled-components";
+import axios from 'axios';
 
 
 const BoatListBackground = styled.div`
@@ -112,20 +113,37 @@ const BoatMapWrapper = styled.div `
     }
 `;
 
+const pageUrl = 'http://localhost:1234/boats';
+function GetBoats(setBoat) {
+
+    axios.get(pageUrl)
+    .then((res) => setBoat(res.data))
+    .catch((error) => console.log(error));
+}
+
+
 export default function BoatList() {
 
-  const [boat, setBoat] = useState('');
+  const [boat, setBoat] = useState([]);
+
+
+
+    useEffect(() => {
+    GetBoats(setBoat);
+    // eslint-disable-next-line
+
+    }, []);
 
 
   const boatList = boat.map((e) => (
 
     <BoatMapWrapper key={e._id}>
 
-      <li class="table-row">
-                    <div className="col col-1">{e.name}</div>
+      <li className="table-row">
+                    <div className="col col-1">{e.modellname}</div>
                     <div className="col col-2">{e.price}</div>
-                    <div className="col col-3">{e.mani}</div>
-                    {e.sail !== 'motor' ?
+                    <div className="col col-3">{e.manifacturedYear}</div>
+                    {e.sail !== 'yes' ?
                       <div className="col col-4">Type: Motorized</div>
                       :
                       <div className="col col-4">Type: Sail</div>
@@ -135,28 +153,17 @@ export default function BoatList() {
   ));
 
 
-    function GetBoats(setBoat, pageUrl) {
-
-    }
-
-    /*The */
-
-    // useEffect(() => {
-    // GetBoats(setBoats, pageUrl);
-    // eslint-disable-next-line}, []);
-    // console.log(Array.isArray(boats))
-    // console.log(boats)
     return (
 
      <BoatListBackground>
         <BoatListStyle>
             <h3>Matches Found:</h3>
-              <ul class="remove-table">
-              <li class="table-header">
-                  <div class="col col-1">Name</div>
-                  <div class="col col-2">Price</div>
-                  <div class="col col-3">Manifactured</div>
-                  <div class="col col-4">Type</div>
+              <ul className="remove-table">
+              <li className="table-header">
+                  <div className="col col-1">Name</div>
+                  <div className="col col-2">Price</div>
+                  <div className="col col-3">Manifactured</div>
+                  <div className="col col-4">Type</div>
               </li>
               {boatList}
           </ul>

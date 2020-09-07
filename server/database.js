@@ -8,6 +8,13 @@ const collectionName = "boats";
 function getAll(callback) {
     getAllBoats({}, callback)
 }
+
+
+function add(callback) {
+  addBoats({}, callback)
+
+}
+
 function getAllBoats(filter, callback) {
   MongoClient.connect(
     url,
@@ -15,7 +22,7 @@ function getAllBoats(filter, callback) {
     async (error, client) => {
       if (error) {
         callback('"ERROR!! Could not connect"');
-        return; // exit the callback function
+        return;
       }
       const col = client.db(dbName).collection(collectionName);
       try {
@@ -29,14 +36,42 @@ function getAllBoats(filter, callback) {
       } finally {
         client.close();
       }
-
-
     }
   );
 }
 
+function addBoats(reqestsBody, callback) {
+	const doc = reqestsBody;
+	MongoClient.connect(
+		url,
+		{ useUnifiedTopology: true},
+		async (error, client) => {
+			if( error ) {
+				callback('"connection problem"');
+				return;
+			}
+			const col = client.db(dbName).collection(collectionName);
+			try {
+				const result = await col.insertOne(doc);
+				callback({
+					result: result.result,
+					ops: result.ops
+				})
+
+			} catch(error) {
+				console.error('addHat error: ' + error.message);
+				callback('"ERROR!! Query error"');
+
+			} finally {
+				client.close();
+			}
+		}
+	)
+}
+
+
 module.exports = {
-  getAllBoats,
+  getAll, add,
 };
 
 

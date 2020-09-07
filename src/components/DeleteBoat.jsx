@@ -111,18 +111,18 @@ export default function DeleteBoat() {
         <DeleteBackground>
             <h3>Remove Boat</h3>
             <DeleteContent>
-                <ul class="remove-table">
-                    <li class="table-header">
-                        <div class="col col-1">Name</div>
-                        <div class="col col-2">Price</div>
-                        <div class="col col-3">Sail</div>
-                        <div class="col col-4"></div>
+                <ul className="remove-table">
+                    <li className="table-header">
+                        <div className="col col-1">Name</div>
+                        <div className="col col-2">Price</div>
+                        <div className="col col-3">Sail</div>
+                        <div className="col col-4"></div>
                     </li>
-                    <li class="table-row">
-                        <div class="col col-1">Example</div>
-                        <div class="col col-2">150 000 KR</div>
-                        <div class="col col-3">Yes</div>
-                        <div class="delete-button">Remove</div>
+                    <li className="table-row">
+                        <div className="col col-1">Example</div>
+                        <div className="col col-2">150 000 KR</div>
+                        <div className="col col-3">Yes</div>
+                        <div className="delete-button">Remove</div>
                     </li>
                 </ul>
             </DeleteContent>

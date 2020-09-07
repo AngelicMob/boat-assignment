@@ -83,30 +83,30 @@ export default function AddBoat() {
 
               <div className ="name-input">
                 <InputStyle id="name" type ="text" placeholder ="Name"></InputStyle>
-                <label for="name"></label>
+                <label htmlFor="name"></label>
               </div>
               <br></br>
 
               <div className="mani-input">
                 <InputStyle id="mani" type ="text" placeholder ="Manifactured Year"></InputStyle>
-                <label for="mani"></label>
+                <label htmlFor="mani"></label>
               </div>
               <br></br>
 
 
               <div className ="price-input">
               <InputStyle id="price" type ="text" placeholder ="Price"></InputStyle>
-              <label for="price"></label>
+              <label htmlFor="price"></label>
               </div>
 
               <div className ="type-of-boat">
-                  <label className="type-input" for="type">Type</label>
+                  <label className="type-input" htmlFor="type">Type</label>
                       <div className ="type">
                             <input type="radio" id="sail" value="sail"name="choice"></input>
-                            <label for="sail">Sail</label>
+                            <label htmlFor="sail">Sail</label>
                             <br></br>
                             <input type="radio" id="motor" value="motor"name="choice"></input>
-                            <label for="motor">Motor</label>
+                            <label htmlFor="motor">Motor</label>
                             <br></br>
                       </div>
               </div>
