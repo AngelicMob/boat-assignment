@@ -141,7 +141,7 @@ export default function BoatList() {
 
       <li className="table-row">
                     <div className="col col-1">{e.modellname}</div>
-                    <div className="col col-2">{e.price}</div>
+                    <div className="col col-2">{e.price} KR</div>
                     <div className="col col-3">{e.manifacturedYear}</div>
                     {e.sail !== 'yes' ?
                       <div className="col col-4">Type: Motorized</div>

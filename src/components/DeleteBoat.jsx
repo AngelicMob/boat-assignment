@@ -1,6 +1,7 @@
 /*Frontend part for the Delete Stuff*/
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import styled from "styled-components";
+import axios from 'axios';
 
 const DeleteBackground = styled.div`
 
@@ -103,9 +104,49 @@ const DeleteContent = styled.div`
         }
     }
 `;
+const DeleteMapWrapper = styled.div `
+
+
+
+
+`;
+
+
+const pageUrl = 'http://localhost:1234/boats';
+function GetBoats(setBoat) {
+
+    axios.get(pageUrl)
+    .then((res) => setBoat(res.data))
+    .catch((error) => console.log(error));
+}
 
 
 export default function DeleteBoat() {
+
+    const [boat, setBoat] = useState([]);
+
+    useEffect(() => {
+    GetBoats(setBoat);
+    // eslint-disable-next-line
+
+    }, []);
+
+
+    const deleteList = boat.map((e) => (
+
+        <DeleteMapWrapper key={e._id}>
+
+          <li className="table-row">
+                <div className="col col-1">{e.modellname}</div>
+                <div className="col col-2">{e.price} KR</div>
+                <div className="col col-3">{e.manifacturedYear}</div>
+                <div className="delete-button">Remove</div>
+
+          </li>
+        </DeleteMapWrapper>
+      ));
+
+
     return (
 
         <DeleteBackground>
@@ -115,15 +156,10 @@ export default function DeleteBoat() {
                     <li className="table-header">
                         <div className="col col-1">Name</div>
                         <div className="col col-2">Price</div>
-                        <div className="col col-3">Sail</div>
+                        <div className="col col-3">Manifactured</div>
                         <div className="col col-4"></div>
                     </li>
-                    <li className="table-row">
-                        <div className="col col-1">Example</div>
-                        <div className="col col-2">150 000 KR</div>
-                        <div className="col col-3">Yes</div>
-                        <div className="delete-button">Remove</div>
-                    </li>
+                    {deleteList}
                 </ul>
             </DeleteContent>
         </DeleteBackground>
