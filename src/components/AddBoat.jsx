@@ -72,16 +72,16 @@ const InputStyle = styled.input`
 
 const mainUrl = 'http://localhost:1234/';
 
-function submit(boat) {
+function submit(boat, resetinput) {
 
   axios.post(`${mainUrl}add`, {params: boat})
   .then((res) =>{
       console.log(res.data);
+      resetinput();
   })
   .catch((error) => console.log(error));
 
   }
-
 
 
 export default function AddBoat() {
@@ -111,8 +111,19 @@ export default function AddBoat() {
       boat.sail = 'no';
     }
 
-    submit(boat)
+    submit(boat, resetinput)
   }
+
+  function resetinput() {
+
+    setName('');
+    setPrice('');
+    setMani('');
+    setType('');
+
+  }
+
+
 
     return (
 

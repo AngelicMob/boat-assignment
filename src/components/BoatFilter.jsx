@@ -82,6 +82,7 @@ function sendfilter(searchfilter, datacallback) {
     .catch((error) => console.log(error));
 }
 
+
 export default function BoatFilter({datacallback}) {
 
     const [addname, setAddName] = useState('');
@@ -106,6 +107,13 @@ export default function BoatFilter({datacallback}) {
       }
 
       sendfilter(searchfilter, datacallback);
+    }
+
+    function resetfilter() {
+
+      setAddName('');
+      setAddPrice('')
+      setAddType('')
     }
 
 
@@ -136,7 +144,11 @@ export default function BoatFilter({datacallback}) {
                             <br></br>
                       </div>
               </div>
-            <SearchButton><button className="search-button" type="button" onClick = {addfilter}>Search</button></SearchButton>
+            <SearchButton>
+                          <button className="search-button" type="button" onClick = {addfilter}>Search</button>
+                          <button className="search-button" type="button" onClick = {resetfilter}>Reset Search</button>
+
+            </SearchButton>
           </FilterContent>
         </div>
     )

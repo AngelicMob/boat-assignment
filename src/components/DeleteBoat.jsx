@@ -69,9 +69,11 @@ const DeleteContent = styled.div`
         }
         .col-1 {
             flex-basis: 20%;
+            text-align: left;
         }
         .col-2 {
             flex-basis: 30%;
+
         }
         .col-3 {
             flex-basis: 32%;
