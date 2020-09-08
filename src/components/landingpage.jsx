@@ -1,7 +1,8 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styled from "styled-components";
 import BoatList from './BoatList';
 import BoatFilter from './BoatFilter';
+
 
 
 const LandingPageStyle = styled.div`
@@ -17,15 +18,22 @@ const LandingPageContent = styled.div`
 
 `;
 
+
 export default function LandingPage() {
 
+
+  const [currentboatlist, setCurrent] = useState([]);
+  function datacallback(e) {
+    setCurrent(e)
+    console.log(e);
+  }
 
     return (
 
         <LandingPageContent>
             <LandingPageStyle>
-                  <BoatFilter></BoatFilter>
-                  <BoatList></BoatList>
+                  <BoatFilter datacallback = {e => datacallback(e)}></BoatFilter>
+                  <BoatList data = {currentboatlist}></BoatList>
             </LandingPageStyle>
         </LandingPageContent>
 

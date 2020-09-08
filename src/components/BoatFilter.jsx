@@ -1,5 +1,7 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styled from "styled-components";
+import axios from 'axios';
+
 
 const FilterContent = styled.div`
     width: 100%;
@@ -73,7 +75,43 @@ const SearchButton = styled.div`
    }
 `;
 
-export default function BoatFilter() {
+
+
+
+const pageUrl = 'http://localhost:1234/';
+function sendfilter(searchfilter, datacallback) {
+
+    axios.get(pageUrl + 'search', {params: searchfilter})
+    .then((res) => datacallback(res.data))
+    .catch((error) => console.log(error));
+}
+
+export default function BoatFilter({datacallback}) {
+
+    const [addname, setAddName] = useState('');
+    const [addprice, setAddPrice] = useState('');
+    const [addtype, setAddType] = useState('');
+
+    const searchfilter = {};
+
+
+    function addfilter() {
+
+      searchfilter.modellname = addname;
+      searchfilter.price = parseInt(addprice);
+      if(addtype === 'sail') {
+        searchfilter.motorized = 'no'
+        searchfilter.sail ='yes'
+      }
+
+      else {
+        searchfilter.motorized = 'yes'
+        searchfilter.sail ='no'
+      }
+
+      sendfilter(searchfilter, datacallback);
+    }
+
 
     return (
         <div>
@@ -81,24 +119,19 @@ export default function BoatFilter() {
             <h3>Search for Boats</h3>
 
             <div className ="name-input">
-              <BoatInput id="name" type ="text" placeholder ="Boat Name"></BoatInput>
+              <BoatInput id="name" type ="text" placeholder ="Boat Name" value = {addname} onChange = {(e) => setAddName(e.target.value)}></BoatInput>
               <label htmlFor="name"></label>
 
             </div>
 
-            <div className ="mani-input">
-              <BoatInput id="mani" type ="text" placeholder ="Where was the boat manifactured?"></BoatInput>
-              <label htmlFor="mani"></label>
-            </div>
-
             <div className ="price-input">
-              <BoatInput id="price" type ="text" placeholder ="Max Price"></BoatInput>
+              <BoatInput id="price" type ="text" placeholder ="Max Price" value = {addprice} onChange = {(e) => setAddPrice(e.target.value)}></BoatInput>
               <label htmlFor="price"></label>
             </div>
 
               <div className ="type-of-boat">
                   <label className="type-input" htmlFor="type">Type</label>
-                      <div className ="type">
+                      <div className ="type" onChange = {(e) => setAddType(e.target.value)}>
                             <input type="radio" id="sail" value="sail"name="choice"></input>
                             <label htmlFor="sail">Sail</label>
                             <br></br>
@@ -107,7 +140,7 @@ export default function BoatFilter() {
                             <br></br>
                       </div>
               </div>
-            <SearchButton><button className="search-button" type="button">Search</button></SearchButton>
+            <SearchButton><button className="search-button" type="button" onClick = {addfilter}>Search</button></SearchButton>
           </FilterContent>
         </div>
     )

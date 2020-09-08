@@ -122,7 +122,7 @@ function GetBoats(setBoat) {
 }
 
 
-export default function BoatList() {
+export default function BoatList({data}) {
 
   const [boat, setBoat] = useState([]);
 
@@ -133,6 +133,12 @@ export default function BoatList() {
     // eslint-disable-next-line
 
     }, []);
+
+    useEffect(() => {
+
+        setBoat(data);
+
+        }, [data]);
 
 
   const boatList = boat.map((e) => (
