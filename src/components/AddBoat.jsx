@@ -78,10 +78,10 @@ const mainUrl = 'http://localhost:1234/';
 
 function submit(boat) {
 
-  console.log('soemtdsfsmf', boat);
+  console.log('submit succesful', boat);
 
 
-  axios.post(mainUrl + 'add', {info: boat})
+  axios.post(`${mainUrl}add`, {params: boat})
   .then((res) =>{
       console.log(res.data);
   })

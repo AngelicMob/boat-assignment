@@ -7,13 +7,15 @@ const { getAll, add, remove, search} = require('./database.js');
 
 
 //Middleware
-app.use( bodyParser.urlencoded({ extended: true }) )
+
 app.use(express.static(__dirname + "/../build"));
 app.use((req, res, next) => {
 console.log(`${req.method} ${req.url}`);
 
   next();
 });
+app.use(bodyParser.urlencoded({ extended: true }) )
+app.use(bodyParser.json())
 
 //Routes
 //GET Boats
@@ -27,10 +29,10 @@ app.get("/boats", (req, res) => {
 
 // POST
 app.post('/add', (req, res) => {
-	console.log('something', req.query)
-	//   add(req.body.params, dataOrError => {
-	// 	  res.send(dataOrError)
-	//   })
+
+	  add(req.body.params, dataOrError => {
+		  res.send(dataOrError)
+	  })
   })
 
 
