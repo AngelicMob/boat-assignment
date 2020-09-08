@@ -25,7 +25,6 @@ export default function LandingPage() {
   const [currentboatlist, setCurrent] = useState([]);
   function datacallback(e) {
     setCurrent(e)
-    console.log(e);
   }
 
     return (

@@ -21,10 +21,6 @@ const FilterContent = styled.div`
 
   .type-of-boat {
 
-    height: 75px;
-    width: 50%;
-    display: block;
-    box-sizing: border-box;
     color: white;
 
   .type-input {
@@ -33,7 +29,7 @@ const FilterContent = styled.div`
     display: block;
     cursor: pointer;
     margin: 14px;
-    margin-left: 497px
+
 }
   label {
     cursor: pointer;

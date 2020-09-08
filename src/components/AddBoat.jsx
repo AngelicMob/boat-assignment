@@ -20,10 +20,7 @@ const AddContent = styled.div`
   }
  .type-of-boat {
 
-    height: 75px;
-    width: 50%;
-    display: block;
-    box-sizing: border-box;
+
     color: white;
 
   .type-input {
@@ -32,7 +29,6 @@ const AddContent = styled.div`
     display: block;
     cursor: pointer;
     margin: 14px;
-    margin-left: 497px
     }
     label {
         cursor: pointer;
@@ -78,9 +74,6 @@ const mainUrl = 'http://localhost:1234/';
 
 function submit(boat) {
 
-  console.log('submit succesful', boat);
-
-
   axios.post(`${mainUrl}add`, {params: boat})
   .then((res) =>{
       console.log(res.data);
@@ -119,10 +112,7 @@ export default function AddBoat() {
     }
 
     submit(boat)
-    console.log(boat);
   }
-
-
 
     return (
 

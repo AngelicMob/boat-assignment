@@ -31,9 +31,7 @@ const DeleteBackground = styled.div`
   }
 `;
 const DeleteContent = styled.div`
-    height: 385px;
-    width: 1114px;
-    margin: -39px;
+    height: 498px;
     margin-top: 18px;
     overflow-x: hidden;
     overflow-y: scroll;

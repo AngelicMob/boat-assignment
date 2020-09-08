@@ -31,9 +31,8 @@ const BoatListBackground = styled.div`
   `;
 
   const BoatListStyle = styled.div`
-    height: 385px;
-    width: 1114px;
-    margin: -39px;
+    height: 535px;
+    /* margin: -39px; */
     margin-top: 18px;
     overflow-x: hidden;
     overflow-y: scroll;
