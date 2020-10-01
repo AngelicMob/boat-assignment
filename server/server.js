@@ -27,8 +27,9 @@ app.get("/boats", (req, res) => {
 	console.log('boats are working');
 });
 
+
 // POST
-app.post('/add', (req, res) => {
+app.post('/boat', (req, res) => {
 
 	  add(req.body.params, dataOrError => {
 		  res.send(dataOrError)
@@ -37,9 +38,9 @@ app.post('/add', (req, res) => {
 
 
 //DELETE
-app.delete("/delete", (req, res) => {
-    console.log('test',req.query.id)
-    remove(req.query.id, dataOrError => {
+app.delete("/boat/:id", (req, res) => {
+    console.log('test',req.params.id)
+    remove(req.params.id, dataOrError => {
     res.send(dataOrError)
   });
 });

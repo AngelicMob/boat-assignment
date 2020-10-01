@@ -74,7 +74,7 @@ const mainUrl = 'http://localhost:1234/';
 
 function submit(boat, resetinput) {
 
-  axios.post(`${mainUrl}add`, {params: boat})
+  axios.post(`${mainUrl}boat`, {params: boat})
   .then((res) =>{
       console.log(res.data);
       resetinput();
@@ -122,8 +122,6 @@ export default function AddBoat() {
     setType('');
 
   }
-
-
 
     return (
 

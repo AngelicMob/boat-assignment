@@ -117,7 +117,7 @@ function GetBoats(setBoat) {
 }
 
 function removeBoat(id, setBoat) {
-    axios.delete(mainUrl + 'delete', {params: {id: id}})
+    axios.delete(mainUrl + 'boat/' + id)
     .then((res) =>{
         GetBoats(setBoat)
         console.log(res.data);
